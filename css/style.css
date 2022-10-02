@@ -1,25 +1,36 @@
 @charset "UTF-8";
 
 h1 {
-
+  font-size: 32px;
+  font-style: italic;
 }
 
 h2 {
-    
 }
 
 .contents {
-
+  background-color: thistle;
+  box-shadow: 5px 5px 5px 5px #ae757a; /* 影の太さ・色 */
+  border-radius: 60px;
 }
 
-.top{
-
+.top > img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
 }
 
-.profile {
-
+body {
+  background-color: aquamarine;
+  text-align: center;
 }
 
-.comment {
+.icon_group {
+  display: inline-block;
+  justify-content: space-evenly;
+  text-align: center;
+}
 
+a {
+  margin-block: 20px;
 }
