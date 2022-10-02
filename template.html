@@ -4,59 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style_hashimoto.css">
     <script src="./js/sample.js"></script>
     <title>自己紹介テンプレート</title>
 </head>
 <body>
+    <section>
+        <div class="top">
+            <img src="./img/top.jpeg" class="header">
+        </div>
+    </section>
     <div class="contents">
-        <section class="top">
-            <!-- ヘッダーの画像を入れてみたりしてもいいかもね！ -->
-            <h1 class="top_title">自己紹介</h1>
-        </section>
         <section class="profile">
-            <h2 class="profile_title">プロフィール</h2>
+            <h2 class="profile_title">Profile</h2>
             <div class="profile_contents">
-                <!-- リスト形式で書きたかったらこれ -->
-                <ul>
-                    <li>ここに</li>
-                    <li>自己紹介の</li>
-                    <li>内容などを</li>
-                    <li>書いてください！</li>
-                </ul>
-                <!-- テキスト形式で書きたかったらこれ -->
-                <p>サンプル</p>
-                <p>サンプル</p>
-                <p>サンプル</p>
-                <p>サンプル</p>
-                <!-- テーブルとか使ってみるのもいいかもね〜〜 -->
-                <table>
-                    <tr>
-                        <th>ヘッダー</th>
-                        <th>ヘッダー</th>
-                    </tr>
-                    <tr>
-                        <td>項目</td>
-                        <td>項目</td>
-                    </tr>
-                    <tr>
-                        <td>項目</td>
-                        <td>項目</td>
-                    </tr>
-                    <tr>
-                        <td>項目</td>
-                        <td>項目</td>
-                    </tr>
-                </table>
-                <!-- もちろん他の形式を使うのも◎ -->
+                <div class="profile_content">
+                    <div class="profile_img"></div>
+                </div>
+                <div class="profile_content">
+                    <table>
+                        <tr>
+                            <td>名前</td>
+                            <td>橋本愛鈴（はしもとあいり）</td>
+                        </tr>
+                        <tr>
+                            <td>出身</td>
+                            <td>埼玉県<br>
+                                神戸の大学に通っていたのでエセ関西弁がよく出ます。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>プログラミングの話</td>
+                            <td>大学院の研究室でC++を用いた研究をしていました。<br>
+                                就活の時にwebアプリの開発のためにJavaを学び、内定をいただいたあとプログラミングスクールでメンターのアルバイトをしていました。<br>
+                                そこではLaravel(PHP), vue.jsを使っていましたが、バージョンが少し古かったので今の業務ではあまり使えていないです…</td>
+                        </tr>
+                    </table>
+
+                </div>
             </div>
         </section>
         <section class="comment">
             <!-- 好きなものを紹介など、自由に書いてもらえるといいのかな〜と思います -->
-            <h2 class="comment_title">ひとことてきなやつ</h2>
+            <h2 class="comment_title">hobby</h2>
             <div class="comment_contents">
-                <p>サンプルテキストだよ〜</p>
+                <div class="comment_content">
+                    <div class="content_title"><img src="./img/sake.jpeg" alt=""><p>日本酒</p></div>
+                    <p class="content_desctiction">日本酒に限らずお酒が好き。飲み会誘ってほしいです。<br>
+                        大学院生時代、日本酒専門の居酒屋でバイトをしていたことから、かなり日本酒に詳しくなりました！<br>
+                        どういうのが飲みたい、と言ってもらえたらおすすめを提案できる自信があります◎
+                    </p>
+                </div>
+                <div class="comment_content">
+                    <div class="content_title"><img src="./img/cosme.jpeg" alt=""><p>コスメ</p></div>
+                    <p class="content_desctiction">
+                        今はだいぶ落ち着きましたが、コスメ収集癖があります。<br>
+                        くちびるは1つしかないのに、リップは50本くらい持っていました。<br>
+                        好きなブランドはNARSとCelvokeです。ちなみにイエベ秋です。
+                    </p>
+                </div>
+                <div class="comment_content">
+                    <div class="content_title"><img src="./img/dice.jpeg" alt=""><p>TRPG</p></div>
+                    <p class="content_desctiction">最近めちゃくちゃハマりました。</p>
+                </div>
+                   
             </div>
+            <p>ほかにも、アニメはゲームは結構幅広く嗜んでいます！</p>
         </section>
     </div>
 </body>
