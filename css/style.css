@@ -21,11 +21,18 @@ h2 {
 }
 
 body {
-  background-color: aquamarine;
+  background-image: url("../img/concentrated_lines_1_1-768x432.jpeg");
   text-align: center;
+  max-width: 500px;
+  margin: auto;
 }
 
 .icon_group {
+  display: inline-block;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.photo {
   display: inline-block;
   justify-content: space-evenly;
   text-align: center;
