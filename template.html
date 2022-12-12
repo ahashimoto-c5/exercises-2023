@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <script src="./js/sample.js"></script>
-    <title>自己紹介テンプレート</title>
-  </head>
-  <body>
-    <div class="contents">
-      <section class="top">
-        <!-- ヘッダーの画像を入れてみたりしてもいいかもね！ -->
-        <h1 class="top_title">プロフィール</h1>
-        <!-- <img src="img/onepiece01_luffy.png" alt="画像" /> -->
-      </section>
-      <section class="profile">
-        <div class="photo">
-            <img src="img/sports_baseball_man_asia.png" alt="" style="width: 20%; vertical-align: middle;">
-            <img src="img/entertainment_comic.png" alt="" style="width: 20%; vertical-align: middle;">
-            <img src="img/building_takoyaki_yatai.png" alt="" style="width: 20%; vertical-align: middle;">
-        </div>
-        <!-- <h2 class="profile_title"></h2> -->
-        <div class="profile_contents">
-          <!-- テキスト形式で書きたかったらこれ -->
-          <p>名前：大谷瞭太(おおやりょうた)</p>
-          <p>出身地：コテコテの大阪やで</p>
-          <p>趣味：映画、漫画(好きなのは<span style="font-size: x-large; color: tomato;">スターウォーズ、チ</span>)</p>
-          <p>これから頑張りたいこと：サーバー系強くなりたい！</p>
-          <!-- もちろん他の形式を使うのも◎ -->
-        </div>
-      </section>
-      <section class="comment">
-        <!-- 好きなものを紹介など、自由に書いてもらえるといいのかな〜と思います -->
-        <h2 class="comment_title">ひとことてきなやつ</h2>
-        <div class="comment_contents">
-          <p>来年一年よろしくお願いします!楽しみにしています！</p>
-        </div>
-        <div class="icon_group">
-          <a href=""
-            ><i class="fa fa-home fa-xl" style="text-align: center"></i
-          ></a>
-          <a href=""><i class="fa fa-phone fa-xl"></i></a>
-          <a href=""><i class="fa fa-camera-retro fa-xl"></i></a>
-        </div>
-      </section>
-      <!-- <section>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <title>自己紹介テンプレート</title>
+</head>
+
+<body>
+  <div class="contents">
+    <section class="top">
+      <!-- ヘッダーの画像を入れてみたりしてもいいかもね！ -->
+      <h1 class="top_title">プロフィール</h1>
+      <!-- <img src="img/onepiece01_luffy.png" alt="画像" /> -->
+    </section>
+    <section class="profile">
+      <div class="photo">
+        <img src="img/sports_baseball_man_asia.png" id="picture1" alt="" style="width: 20%; vertical-align: middle;">
+        <img src="img/entertainment_comic.png" id="picture2" alt="" style="width: 20%; vertical-align: middle;">
+        <img src="img/building_takoyaki_yatai.png" id="picture3" alt="" style="width: 20%; vertical-align: middle;">
+      </div>
+      <!-- <h2 class="profile_title"></h2> -->
+      <div class="profile_contents">
+        <!-- テキスト形式で書きたかったらこれ -->
+        <p>名前：大谷瞭太(おおやりょうた)</p>
+        <p>出身地：コテコテの大阪やで</p>
+        <p>趣味：映画、漫画(好きなのは<span style="font-size: x-large; color: tomato;">スターウォーズ、チ</span>)</p>
+        <p>これから頑張りたいこと：サーバー系強くなりたい！</p>
+        <!-- もちろん他の形式を使うのも◎ -->
+      </div>
+    </section>
+    <section class="comment">
+      <!-- 好きなものを紹介など、自由に書いてもらえるといいのかな〜と思います -->
+      <h2 class="comment_title">ひとことてきなやつ</h2>
+      <div class="comment_contents">
+        <p>来年一年よろしくお願いします!楽しみにしています！</p>
+      </div>
+      <div class="icon_group">
+        <a href=""><i class="fa fa-home fa-xl" style="text-align: center"></i></a>
+        <a href=""><i class="fa fa-phone fa-xl"></i></a>
+        <a href=""><i class="fa fa-camera-retro fa-xl"></i></a>
+        <!-- <a id="starwars" href="">スターウォーズ</a> -->
+      </div>
+    </section>
+    <!-- <section>
         <h2>事前準備</h2>
         <ul>
           <li>自分の自己紹介を作る</li>
@@ -62,6 +60,69 @@
           <li>自己紹介</li>
         </ul>
       </section> -->
-    </div>
-  </body>
+  </div>
+</body>
+<script>
+  // let name1 = 'Ryota Ohya' 
+  // name1 = 'Kobayashi Hashimoto'
+  // const name2 = 'Ohya'
+  // name2 = 'Ohtani'
+//   let name = 'string' //文字列
+//   let age = 100 //数値
+//   let freshmanArr = ['ohya', 'hashimoto', 'kobayashi'] //配列
+//   let hashimoto = freshmanArr[1]
+//   let kobayashiObj = {
+//     name: 'kobayashi',
+//     age: 23,
+//     gender: 'male'
+//   } //オブジェクト
+//   let kobayashiAge = kobayashiObj.age
+//   let fun = () => {} //関数
+//   if (kobayashiObj.age == '23') {
+//     console.log("小林23歳だよ==")
+//   } else {
+//     console.log('false')
+//   }
+//   if (kobayashiObj.age === '23') {
+//     console.log("小林23歳だよ===")
+//   } else {
+//     console.log('false')
+//   }
+
+//   let ivankov = (gender) => {
+//     if (gender === 'male') {
+//       return 'female'
+//     }
+//   }
+
+//   let func = (name) => {
+//      console.log(name)
+// }
+// func('kobayaddddddsjkjiijijiijijijijijiddddddshi')
+
+//   let kobayashiGender = ivankov(kobayashiObj.gender)
+//   console.log(kobayashiGender)
+
+//   for (let i = 1; i <= 10; i++) {
+//     kobayashiAge += 1;
+//     console.log('小林は' + i + '年後' + kobayashiAge + '歳です')
+//   }
+
+
+
+  $(() => {
+    $.ajax({
+      url: "https://pokeapi.co/api/v2/pokemon/pikachu/",
+      type: "get"
+    }).done(function (response) {
+      console.log(response)
+      let url = response.sprites.front_default
+      $('#picture1').attr('src', url)
+      // $('#starwars').attr('href', response.url)
+    }).fail(function (err) {
+      console.log(err)
+    })
+  })
+</script>
+
 </html>

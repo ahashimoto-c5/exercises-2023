@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>NASA API</title>
+    <!-- Jqueryの説明とCDNについて解説 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <!-- pタグとimgタグを配置 -->
+    <div>
+      <p>test</p>
+      <p id="aaa"></p>
+      <!-- 写真のURLをgetしてここに配置する -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsAMc4a-YbtBfTm3kJuQGDFyhJHIDrPb1D0A&usqp=CAU"
+        alt=""
+        id="picture"
+      />
+    </div>
+  </body>
+  <!-- scriptタグ内でJQueryを使い非同期通信でAPIにアクセスする！ -->
+  <script>
+    // alert('テストです')
+    document.write('Hello world!!')
+
+    let string = 'test'
+    let number = 1000000
+    let boolean = true
+    let array = ['りんご', 'バナナ', ['test', 'aaaa']]
+    let object = {
+      a: '1',
+      b: '2',
+      c: '3',
+      d: '4',
+    }
+    console.log(
+      typeof string,
+      typeof number,
+      typeof boolean,
+      typeof array,
+      typeof object
+    )
+    console.log(array[2][0])
+    console.log(object.a)
+    // https://api.nasa.gov/ NASAのAPIキーを取得してもらう
+    $(() => {
+        $.ajax({
+            url: "https://api.nasa.gov/planetary/apod?api_key=7ba4ChYP6ZglbcuI6UozNfE51sSTOEav6Ik7g9WV",
+            type: "get"
+        }).done(function (response) {
+            console.log(response.url)
+            let url = response.url
+            $('#picture').attr('src', url)
+            $('#aaa').text(response.date)
+        }).fail(function(err) {
+            console.log(err)
+        })
+    })
+  </script>
+</html>

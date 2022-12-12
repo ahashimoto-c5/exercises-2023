@@ -1,0 +1,154 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script
+		src="http://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+
+<!--script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script-->
+
+	<style type="text/css">
+		body{
+			background: #333;
+			color: #fff;
+			padding: 20px;
+			line-height: 1.4;
+			font-size: 30px;
+		}
+		#test{
+			font-size: 120%;
+			margin: 0 0 20px 0;
+		}
+		.section{
+			border: 1px solid #ccc;
+			padding:  30px;
+		}
+
+		.q{
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 2;
+		}
+		.nav{
+			display: flex;
+		}
+		.nav .button{
+			margin-right: 20px;
+		}
+		.rotation{
+			transform: rotate(180deg);
+			display: inline-block;
+			transition: all 0.4s ease-out;
+		}
+		.dot{
+			position: absolute;
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			background: red;
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			transform: translate( -50%, -50%);
+		}
+		.tf{
+			margin: 0 0 20px 0;
+		}
+		body,
+		html{
+			min-height: 100%;
+		}
+	</style>
+	<script>
+		$(function() {
+			$('.a').on('click', function() {
+				$('#test').css('color', 'Red');
+			});
+
+			$('.b').on('click', function() {
+				$('#test').append(' 名前はまだない');
+			});
+			
+			$('.c').on('click', function() {
+				$('#test').append('<p>夏目漱石</p>');
+			});
+
+			$('.d').on('click', function() {
+				$('#test').addClass('rotation');
+			});
+
+			$('.e').on('click', function() {
+				$('#test').removeClass('rotation');
+			});
+
+			$('.f').on('click', function() {
+				$('#test').slideUp();
+			});
+
+			$('.g').on('click', function() {
+				$('#test').slideDown();
+			});
+
+			$('.h').on('click', function() {
+				$('#test').css({
+					'position':'absolute',
+					'display':'inline-block',
+					'top':'50%',
+					'left':'50%',
+					'transform':'translate( -50%, -50%)'
+				});
+			});
+
+			$('.i').on('click', function() {
+				$('#field').val($('#test').text());
+			});
+
+			$('.j').on('click', function() {
+				$('.item').remove();
+			});
+		});
+	</script>
+</head>
+
+
+<body>
+
+<div class="item">
+	<section class="section"> 
+		<div id="test">吾輩は猫である</div>
+		<div class="tf"><input type="text"  id="field"></div>
+		<div class="nav"><button class="button a">ボタンA</button><button class="button b">ボタンB</button><button class="button c">ボタンC</button><button class="button d">ボタンD</button><button class="button e">ボタンE</button><button class="button f">ボタンF</button><button class="button g">ボタンG</button><button class="button h">ボタンH</button><button class="button I">ボタンI</button><button class="button J">バルス</button></div>
+
+	</section>
+	<section class="q">
+		<ul>
+			<li>ボタンAをクリックするとid名「#test」のテキストカラーを赤にする</li>
+			<li>ボタンBをクリックするとid名「#test」に「名前はまだない」を追加する</li>
+			<li>ボタンCをクリックするとid名「#test」の下に (#testと同じ階層) &lt;p&gt;夏目漱石&lt;/p&gt; を追加する</li>
+			<li>ボタンDをクリックすると、.rotation というクラスを付与する</li>
+			<li>ボタンEをクリックすると、.rotation というクラスを削除する</li>
+			<li>ボタンFをクリックすると、id名「#test」をスライドアップして消す</li>
+			<li>ボタンGをクリックすると、id名「#test」をスライドダウンして表示させる</li>
+			<li>ボタンHをクリックすると、id名「#test」をwindowの前後左右中央に持ってくる　(赤い点にテキストの中心がくる)</li>
+			<li>ボタンIをクリックすると、id名「#test」のテキストをid名「#field」の入力フィールドに書き込む</li>
+			<li>「#field」の入力フィールドにフォーカスを当てると(入力状態にすると)、フィールドの中を空にする</li>
+			<li>バルスをクリックすると、画面上のテキストやボタン全てを消す</li>
+		</ul>
+	</section>
+	<span class="dot"></span>
+	<div></div>
+</div>
+
+
+
+
+<!--
+		
+	-->
+</body>
+</html>
